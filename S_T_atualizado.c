@@ -9,6 +9,8 @@ int main () {
     int turisticos1, turisticos2;
     float densidade1, densidade2;
     float percapita1, percapita2;
+    float power1, power2;
+    int resultado1, resultado2;
 
     printf("***Cadastre sua primeira carta***\n");
     
@@ -62,6 +64,13 @@ int main () {
     densidade2 =  (populacao2/ area2);
     percapita2  =   (pib2 / populacao2);
 
+    power1 = (area1 + pib1 + percapita1 + densidade1 + populacao1);
+    power2 = (area2 + pib2 + percapita2 + densidade2 + populacao2);
+
+    resultado1 = (power1 > power2);
+    resultado2 = (power2 > power1);
+
+  
     printf("Cartas cadrastadas com sucesso! \n");
     printf("Aqui estão suas cartas:\n)");
     printf("\n");
@@ -87,5 +96,38 @@ int main () {
     printf("Pontos turísticos: %d\n", turisticos2);
     printf("Densidade populacional: %f\n", densidade2);
     printf("PIB Per Capita: %f\n", percapita2);
+
+    if (pib1 > pib2)
+    {
+    printf("O estado %s tem o maior PIB\n", nome1);
+    } else {
+      printf("O estado %s tem o maior PIB\n", nome2);
+    }
+    if (area1 > area2)
+    {
+    printf(" O estado %s tem a maior area\n", nome1);
+    } else {
+      printf("O estado %s tem a maior area\n", nome2);
+    }
+    if (populacao1 > populacao2)
+    { printf("O estado %s tem a maior populaçao\n",nome1);
+    } else { 
+      printf("O estado %s tem a maior populaçao\n",nome2);
+    }
+    if (turisticos1 > turisticos2){
+      printf("O estado %s  tem mais pontos turisticos\n", nome1);
+    } else {
+      printf("O estado %s tem mais pontos turisticos\n", nome2);
+    }
+    if (densidade1 > densidade2) {
+      printf("O estado %s tem amaior densidade populacional\n", nome1);
+    } else{
+      printf("O estado %s tem a maior densidade popilacional\n",nome2);
+    }
+    if(percapita1 > percapita2) {
+      printf("O estado %s tem a maior renda per percapita\n", nome1);
+    } else {
+      printf("O estado %s tem a maior renda per percapita\n",nome2);
+    }
     return 0;
     }
