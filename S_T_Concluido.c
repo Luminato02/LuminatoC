@@ -18,21 +18,21 @@ int main () {
     int resultado1, resultado2;
     int Nome1, Nome2;
 
-   // srand(time(0));
-    //area1 = 1;
-    //area2 = 0;
-    //pib1 = 1;
-    //pib2 = 0;
-    //populacao1 = 1;
-    //populacao2 = 0;
-    //pontos1 =1;
-    //pontos2 = 0;
-    //densidade1 = 1;
-    //densidade2 = 0;
-    //percapita1 = 1;
-    //percapita2 = 0;
-    //power1 = 1;
-    //power2 = 0;
+    srand(time(0));
+    area1 = 1;
+    area2 = 0;
+    pib1 = 1;
+    pib2 = 0;
+    populacao1 = 1;
+    populacao2 = 0;
+    pontos1 =1;
+    pontos2 = 0;
+    densidade1 = 1;
+    densidade2 = 0;
+    percapita1 = 1;
+    percapita2 = 0;
+    power1 = 1;
+    power2 = 0;
 
     printf("***Cadastre sua primeira carta***\n");
     
@@ -106,6 +106,7 @@ int main () {
     printf("Pontos turísticos: %d\n", pontos1);
     printf("Densidade populacional: %f\n",densidade1);
     printf("PIB Per percapita: %f\n", percapita1);
+    printf("power1: %f\n", power1);
 
     printf("\n");
     
@@ -118,16 +119,15 @@ int main () {
     printf("Pontos turísticos: %d\n", pontos2);
     printf("Densidade populacional: %f\n", densidade2);
     printf("PIB Per Capita: %f\n", percapita2);
-    printf("power1: %f\n", power1);
     printf("power2: %f\n", power2);
 
     printf("***Carta 1***");
-    printf("Escolha um atributo\n");
-    printf("1. area\n");
-    printf("2. percapita\n");
-    printf("3. PIB\n");
-    printf("4. Densidade\n");
-    printf("5. pontos");
+    printf("Escolha um atributo:\n");
+    printf("1. area:\n");
+    printf("2. percapita:\n");
+    printf("3. PIB:\n");
+    printf("4. Densidade:\n");
+    printf("5. pontos:\n");
     printf("6. power:\n");
     printf("7. populaçao:\n");
     printf(" Escolha uma opçao");
@@ -167,10 +167,10 @@ resultado1 = power1 > power2 ? 1 : 0;
     printf("\n");
     printf("***carta 2***");
     printf("escolha um atributo: \n");
-    printf("1. area\n");
-    printf("2. percapita\n");
-    printf("3. PIB\n");
-    printf("4. Densidade\n");
+    printf("1. area:\n");
+    printf("2. percapita:\n");
+    printf("3. PIB:\n");
+    printf("4. Densidade:\n");
     printf("5. pontos: \n");
     printf("6. power:\n");
     printf("7. populaçao:\n");
