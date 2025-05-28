@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 
 
 int main () {
@@ -45,7 +44,6 @@ int main () {
     
     densidade1 = (float)(populacao1 / area1);
     percapita1 =  (float)(pib1 / populacao1 );
-    printf("\n");
     
     printf("***Cadastre sua segunda carta***\n");
     printf("Nome do estado: \n");
@@ -68,9 +66,10 @@ int main () {
     
     printf("Pontos turísticos: \n");
     scanf("%d", &pontos2); 
+    printf("\n");
     
-    densidade2 =  (populacao2/ area2);
-    percapita2  =   (pib2 / populacao2);
+    densidade2 = (float) (populacao2/ area2);
+    percapita2  =  (float) (pib2 / populacao2);
 
     power1 = (area1 + pib1 + percapita1 + densidade1 + populacao1);
     power2 = (area2 + pib2 + percapita2 + densidade2 + populacao2);
@@ -91,8 +90,8 @@ int main () {
     printf("PIB: %.1f \n", pib1);
     printf("Pontos turísticos: %d\n", pontos1);
     printf("Densidade populacional: %f\n",densidade1);
-    printf("PIB Per percapita: %f\n", percapita1);
-    printf("power1: %f\n", power1);
+    printf("PIB Per percapita: %.1f\n", percapita1);
+    printf("power1: %1.f\n", power1);
 
     printf("\n");
     
@@ -104,115 +103,68 @@ int main () {
     printf("PIB: %.1f \n", pib2);
     printf("Pontos turísticos: %d\n", pontos2);
     printf("Densidade populacional: %f\n", densidade2);
-    printf("PIB Per Capita: %f\n", percapita2);
-    printf("power2: %f\n", power2);
-
-    printf("***Carta 1***");
-    printf("Escolha um atributo:\n");
-    printf("1. area:\n");
-    printf("2. percapita:\n");
-    printf("3. PIB:\n");
-    printf("4. Densidade:\n");
-    printf("5. pontos:\n");
-    printf("6. power:\n");
-    printf("7. populaçao:\n");
-    printf(" Escolha uma opçao");
-    scanf("%d", &nome1);
-
-  
-    switch (Nome1)
-    {
-    case 1:
-      printf("area -"); 
-     resultado1 = area1 > area2 ? 1 : 0;
-      break; 
-      case 2:
-      printf("percapita -"); 
- resultado1 = percapita1 > percapita2 ? 1 : 0;
-      break;
-      case 3:
-      printf("PIB -");
-resultado1 = pib1 > pib2 ? 1 : 0;
-      break;
-      case 4:
-      printf("Densidade -");
-resultado1 = densidade1 < densidade2 ? 1 : 0;
-      break;
-      case 5:
-      printf("pontos -");
-resultado1 = pontos1 > pontos2 ? 1 : 0;
-      case 6:
-      printf("power -");
-resultado1 = power1 > power2 ? 1 : 0;
-      break;
-      case 7:
-      printf("populaçaop");
-      resultado1 = populacao1 > populacao2 ? 1 : 0;
-      break;
-    } 
+    printf("PIB Per Capita: %.1f\n", percapita2);
+    printf("power2: %.1f\n", power2);
     printf("\n");
-    printf("***carta 2***");
-    printf("escolha um atributo: \n");
-    printf("1. area:\n");
-    printf("2. percapita:\n");
-    printf("3. PIB:\n");
-    printf("4. Densidade:\n");
-    printf("5. pontos: \n");
-    printf("6. power:\n");
-    printf("7. populaçao:\n");
-    printf("escolha uma opçao: \n");
-  
-    scanf("%d", &Nome2);
 
-    switch (Nome2)
-    {
-    case 1:
+    printf("comparação de cartas:\n");
+
       printf("area -");
-      resultado2 = area1 > area2 ? 1 : 0;
-      break;
-    
-      case 2:
-      printf("percapita -");
-      resultado2 = percapita1 > percapita2 ? 1 : 0;
-      break;
-
-      case 3:
-      printf("PIB -");
-      resultado2 = pib1 > pib2 ? 1 : 0;
-      break;
-
-      case 4:
-      printf("Densidade -");
-      resultado2 = densidade1 < densidade2 ? 1 : 0;
-      break;
-
-      case 5:
-      printf("pontos - ");
-      resultado2 = pontos1 > pontos2 ? 1 : 0;
+      if  (area1 > area2 ? 1 : 0)
+        printf("Carta 1 é maior\n");
+      else if (area1 < area2 ? 1 : 0)
+        printf("Carta 2 é maior\n");
+      else
+        printf("As cartas são iguais\n");
       
-      case 6:
+      printf("percapita -");
+      if (percapita1 > percapita2 ? 1 : 0)
+        printf("Carta 1 é maior\n");
+      else if (percapita1 < percapita2 ? 1 : 0)
+        printf("Carta 2 é maior\n");
+      else
+        printf("As cartas são iguais\n");
+
+      printf("PIB -");
+      if (pib1 > pib2 ? 1 : 0)
+        printf("Carta 1 é maior\n");
+      else if (pib1 < pib2 ? 1 : 0)
+        printf("Carta 2 é maior\n");
+      else
+        printf("As cartas são iguais\n");
+    
+      printf("Densidade -");
+      if (densidade1 < densidade2 ? 1 : 0)
+        printf("Carta 1 é maior\n");
+      else if (densidade1 > densidade2 ? 1 : 0)
+        printf("Carta 2 é maior\n");
+      else
+        printf("As cartas são iguais\n");
+    
+      printf("pontos - ");
+      if (pontos1 > pontos2 ? 1 : 0)
+        printf("Carta 1 é maior\n");
+      else if (pontos1 < pontos2 ? 1 : 0)
+        printf("Carta 2 é maior\n");
+      else
+        printf("As cartas são iguais\n");
+      
       printf("power -");
-      resultado2 = power1 > power2 ? 1 : 0;
-      break;
-      case 7:
+      if (power1 > power2 ? 1 : 0)
+        printf("Carta 1 é maior\n");
+      else if (power1 < power2 ? 1 : 0)
+        printf("Carta 2 é maior\n");
+      else
+        printf("As cartas são iguais\n");
+
       printf("populaçaop");
-      resultado2 = populacao1 > populacao2 ? 1 : 0;
-      break;
-
-    default:
-
-      break;
-    }
+      if (populacao1 > populacao2 ? 1 : 0)
+        printf("Carta 1 é maior\n");
+      else if (populacao1 < populacao2 ? 1 : 0)
+        printf("Carta 2 é maior\n");
+      else
+        printf("As cartas são iguais\n");
     printf("\n");
-    if (resultado1 && resultado2)
-    {
-      printf("Parabens carta 1 venceu!\n");
-    } else if (resultado1 =! resultado2){
-      printf("voce empatou!\n");
-    } else{
-      printf("voce carta 1 perdeu\n");
-    } 
-
-
+     
     return 0;
-    }
+}

@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "XADREZ.C": "cpp"
+        "XADREZ.C": "cpp",
+        "LOGICA_SUPER_TRUNFO.C": "cpp"
     }
 }
